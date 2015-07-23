@@ -32,6 +32,7 @@ exports.index = function(req, res){
                     'from=' + process.env.HIPCHAT_FROM_NAME + '&' +
                     'message=' + message + '&' +
                     'notify=1&' +
+                    'color=' + process.env.HIPCHAT_MESSAGE_COLOR + '&' +
                     'format=json';
 
         request(hipchatUrl, function (err, result, body) {
